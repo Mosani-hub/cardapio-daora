@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Online</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #4a793e;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            position: relative;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .banner {
+            width: 100%;
+            max-height: 150px;
+            opacity: 0.8;
+        }
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #A5B68D;
+            font-size: 1.5em;
+            margin: 0;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px;
+        }
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+        .menu-category {
+            margin: 15px;
+            padding: 15px;
+            border: 1px solid #25D366;
+            border-radius: 10px;
+        }
+        .item {
+            margin: 10px 0;
+            color: #705C53;
+        }
+        .item label {
+            font-size: 1em;
+        }
+        .item select, .item input {
+            width: 100%;
+            padding: 8px;
+            font-size: 1em;
+            margin-top: 5px;
+            border: 1px solid #A5B68D;
+            border-radius: 5px;
+            background-color: #333;
+            color: #A5B68D;
+        }
+        .add-button, .whatsapp-button {
+            width: 90%;
+            max-width: 300px;
+            padding: 10px;
+            margin: 10px auto;
+            background-color: #705C53;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            display: block;
+        }
+        .whatsapp-button {
+            background-color: #25D366;
+            color: #fff;
+        }
+        .whatsapp-button:hover {
+            background-color: #20c155;
+        }
+        .order-list {
+            margin: 10px;
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczO5gA3szOwIaGpRokq3oMRFEIcJNlQZXLJvHeYmHWTzN_0mr4Tv2IryQ-mbGLvytW9x6EhzVThlXpTzhsCTIRn8TMgr4NmqEPhjqJq834mTFyNHAVu-Htw1quM48NvDnslfyPlv9mA4WMcPqg00bMbvDw=w1020-h300-s-no-gm?authuser=0" alt="Banner do Cardápio" class="banner">
+       
+    </header>
+
+    <div class="gallery">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczMyhII8TKkNqtt6AOqV3YCeTRH_e_w3D_oehenOLQunpdaAkcN-xO25S9Vh6CvNxkSZILrcuNaShVCSUUzaBfqe0LW1pky9GeV_oDF8StOyQ-nQQF_3eNwEKAQengbYVhZMGPsc_TO32zJ0DDjogsKgzQ=w607-h607-s-no-gm?authuser=0" alt="Empada Pequena">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczOoQhtx1aZN-2WfBsad876yHBXccOlusFYzxNaNCowI4S1K9eQ_j0uuXfhf9pQMC-WXrizPb4Ntr8ovnIPdzplOcrAK8xYMWxgtHf_AwnN-MG9ogpESOFL6OOf5p4AK9PSAJbFqxprd4JU9wGJyIxmqJw=w607-h607-s-no-gm?authuser=0" alt="Empada Média">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczPTF0ARGYmcfM82I4nJXfuFdkFA4VgjtarsR_AmTO3aZfdoyV9L5HKts-2CaOAjf3OtZupZpIQnJCzHlNu-0xiE70Bws5eMPR_HJfJm-nA16GvhHzaZ5tzSM5vEMs3-jlHFApmmhOb2ALUad_M2wGwtpw=w607-h607-s-no-gm?authuser=0" alt="Empada Grande">
+    </div>
+
+    <div class="menu-category">
+        <h2>Empadas</h2>
+
+        <div class="item">
+            <label for="size">Tamanho:</label>
+            <select id="size">
+                <option value="Pequena - 220ml">Pequena - 220ml</option>
+                <option value="Média - 500ml">Média - 500ml</option>
+                <option value="Grande - 1kg">Grande - 1kg</option>
+            </select>
+        </div>
+
+        <div class="item">
+            <label for="flavor">Recheio:</label>
+            <select id="flavor">
+                <option value="Frango" data-price-small="5.00" data-price-medium="8.00" data-price-large="12.00">Frango</option>
+                <option value="Frango com Catupiry" data-price-small="6.00" data-price-medium="9.00" data-price-large="13.00">Frango com Catupiry</option>
+            </select>
+        </div>
+
+        <div class="item">
+            <label for="quantity">Quantidade:</label>
+            <input type="number" id="quantity" min="1" max="10" value="1">
+        </div>
+
+        <button class="add-button" onclick="addToOrder()">Adicionar ao Pedido</button>
+    </div>
+
+    <h3>Pedido:</h3>
+    <div class="order-list" id="orderList"></div>
+
+    <button class="whatsapp-button" onclick="sendWhatsAppMessage()">Finalizar Pedido no WhatsApp</button>
+
+    <script>
+        let order = [];
+
+        function addToOrder() {
+            const size = document.getElementById("size").value;
+            const flavorSelect = document.getElementById("flavor");
+            const flavor = flavorSelect.value;
+            const quantity = parseInt(document.getElementById("quantity").value);
+
+            let pricePerItem;
+            if (size === "Pequena - 220ml") {
+                pricePerItem = parseFloat(flavorSelect.options[flavorSelect.selectedIndex].dataset.priceSmall);
+            } else if (size === "Média - 500ml") {
+                pricePerItem = parseFloat(flavorSelect.options[flavorSelect.selectedIndex].dataset.priceMedium);
+            } else {
+                pricePerItem = parseFloat(flavorSelect.options[flavorSelect.selectedIndex].dataset.priceLarge);
+            }
+
+            const totalPrice = (pricePerItem * quantity).toFixed(2);
+            order.push(`${quantity} empada(s) de tamanho ${size} com recheio de ${flavor} - Total: R$${totalPrice}`);
+            displayOrder();
+        }
+
+        function displayOrder() {
+            const orderList = document.getElementById("orderList");
+            orderList.innerHTML = order.map(item => `<p>${item}</p>`).join('');
+        }
+
+        function sendWhatsAppMessage() {
+            const message = `Olá, gostaria de fazer o seguinte pedido:\n\n${order.join('\n')}`;
+            const whatsappUrl = `https://wa.me/5517996390812?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
